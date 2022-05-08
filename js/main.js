@@ -1,5 +1,10 @@
-//Event listeners - One for the click of the button 
+//Event listeners - One for the click of the button, Second event listener added to run Pokemon() when enter button pushed
 document.querySelector("button").addEventListener("click", pokemon)
+document.querySelector("input").addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    pokemon()
+  }
+})
 
 function pokemon() {
   //get and store the user input of pokemon name and convert it to lowercase so that it doesn't clash with the API
